@@ -17,13 +17,13 @@ public class Empleado {
     private String apellido;
     private double salario;
     private final double SUELDO_MINIMO = 1000000;
-    
+
     public Empleado(String nombre, String apellido, double salario) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.salario = salario;
     }
-    
+
     public Empleado(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -51,31 +51,28 @@ public class Empleado {
     }
 
     public void setSalario(double salario) {
-        if (salario>=0) {
-            this.salario = salario;            
-        }
-        else{
+        if (salario >= 0) {
+            this.salario = salario;
+        } else {
             System.out.println("Hagalo bien");
         }
     }
 
-    public void aumento(){
+    public void aumento() {
         this.salario *= 1.1;
     }
-    
-    public void aumento(double valor){
-        if (valor>0) {
+
+    public void aumento(double valor) {
+        if (valor > 0) {
             this.salario *= valor;
-        }
-        else{
+        } else {
             System.out.println("Hagalo bien");
         }
     }
-    
+
     public void mostrarEmpleado() {
-        System.out.println(nombre + " " + apellido );
+        System.out.println(nombre + " " + apellido);
         System.out.println("salario: $" + salario);
     }
-    
-    
+
 }

@@ -11,30 +11,31 @@ Cree dos objetos Empleado y muestre el salario anual de cada objeto. Después, p
 del 10% y muestre el salario anual de cada Empleado otra vez.
  */
 package Ejercicio01;
+
 public class Ejercicio01 {
 
     public static void main(String[] args) {
         Empleado jaimito = new Empleado("Jaime", "Gutierrez");
         Empleado jose = new Empleado("Jose", "Jose", 2500);
-        
+
         jaimito.mostrarEmpleado();
         System.out.println("");
         jose.mostrarEmpleado();
-        
+
         jose.aumento(10);
         System.out.println("");
         jaimito.aumento();
         jaimito.aumento(-15);
-        
+
         jaimito.mostrarEmpleado();
         System.out.println("");
         jose.mostrarEmpleado();
-        
+
         System.out.println(jose.getApellido());
         System.out.println(jose.getNombre());
-        
+
         jose.mostrarEmpleado();
-        
+
     }
-    
+
 }

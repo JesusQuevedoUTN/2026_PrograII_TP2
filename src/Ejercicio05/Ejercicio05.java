@@ -1,4 +1,5 @@
 package Ejercicio05;
+
 /*
 Ejercicio 5
 
@@ -13,8 +14,7 @@ Usar constructores sobrecargados para crear objetos Fecha inicializados con fech
 imprimir. En el primer caso, el constructor debe recibir tres valores enteros. En el segundo, debe recibir un objeto 
 String y dos valores enteros. En el tercero debe recibir un valor entero, string y otro entero. Escriba una aplicación 
 de prueba llamada PruebaFecha, que demuestre las capacidades de la clase Fecha.
-*/
-
+ */
 public class Ejercicio05 {
 
 }

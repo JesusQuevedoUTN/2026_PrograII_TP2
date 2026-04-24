@@ -2,8 +2,8 @@ package Ejercicio02;
 
 // Autor: Chisus
 // Fecha de creación: 24/04/2026
-
 public class CuentaBancaria {
+
     private TipoDeInteres tipo;
     private double saldo;
     private double interes;
@@ -17,9 +17,9 @@ public class CuentaBancaria {
         this();
         this.tipo = tipo;
     }
-    
+
     public void setTipo(TipoDeInteres tipo) {
-        if(this.tipo == null){
+        if (this.tipo == null) {
             this.tipo = tipo;
         }
     }
@@ -29,31 +29,30 @@ public class CuentaBancaria {
     }
 
     public void ingresarDinero(double saldo) {
-        if (saldo>=0 && saldo==0) {
-            this.saldo = saldo;        
+        if (saldo >= 0 && saldo == 0) {
+            this.saldo = saldo;
         }
     }
-    
-    public void retirarDinero(double saldo){
-        if (saldo<=this.saldo) {
+
+    public void retirarDinero(double saldo) {
+        if (saldo <= this.saldo) {
             this.saldo -= saldo;
-        }
-        else
+        } else {
             System.out.println("El monto a retirar excede el saldo");
-    }
-    
-    public void abonarInteres(){
-        if (saldo>=interes) {
-            System.out.println("Pagó su interes");
         }
-        else{
+    }
+
+    public void abonarInteres() {
+        if (saldo >= interes) {
+            System.out.println("Pagó su interes");
+        } else {
             System.out.println("Ahorre más");
         }
     }
-    
+
     public void mostrar() {
         System.out.println("CuentaBancaria");
         System.out.println("tipo= " + tipo + ", saldo=" + saldo);
         System.out.println("interes=" + interes);
-    }   
+    }
 }
