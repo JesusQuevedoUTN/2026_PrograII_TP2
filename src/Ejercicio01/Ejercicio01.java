@@ -9,10 +9,6 @@ del 10% y muestre el salario anual de cada Empleado otra vez.
  */
 package Ejercicio01;
 
-/**
- *
- * @author jesus
- */
 public class Ejercicio01 {
 
     /**
