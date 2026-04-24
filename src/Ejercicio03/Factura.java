@@ -1,4 +1,5 @@
 package Ejercicio03;
+
 import java.util.ArrayList;
 
 /*
@@ -23,13 +24,11 @@ establecerse en 0. Si el precio por artículo no es positivo, debe
 establecerse en 0.0. Escriba una aplicación de prueba 
 llamada PruebaFactura, que demuestre las capacidades de la clase Factura.
  */
-
-
 public class Factura {
 
     private static int idDeLasFacturas = 1;
     private int numeroDeFactura;
-    
+
     private ArrayList<CantidadDeArticulos> productos;
 
     public Factura() {
@@ -41,8 +40,13 @@ public class Factura {
     public void agregarArticulo(Articulo articulo, int cantidad) {
         if (cantidad > 0) {
             int i = 0;
-            while (i <= productos.size() && articulo != productos[i].getArticulo() ) {
+            while (i < productos.size() && articulo != productos.get(i).getArticulo()) {
                 i++;
+            }
+            if (i < productos.size()) {
+                productos.get(i).agregarCantidad(cantidad);
+            } else {
+                productos.add(new CantidadDeArticulos(articulo, cantidad));
             }
         }
     }
@@ -54,5 +58,5 @@ public class Factura {
         }
         return total;
     }
-    
+
 }
