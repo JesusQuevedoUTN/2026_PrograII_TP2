@@ -26,28 +26,28 @@ public class PruebaFactura {
 
     public static void main(String[] args) {
         //Main creado con Gemini
-        
+
         // --- EJEMPLO 1 
         Factura f1 = new Factura();
         f1.agregarArticulo(Articulo.LLAVE_INGLESA, 1);
         f1.agregarArticulo(Articulo.TORNILLOS, 50);
         f1.agregarArticulo(Articulo.MARTILLO, 1);
-        
+
         System.out.println("Factura Nro: 1");
         System.out.println("Monto total de compra grande: $" + f1.montoFactura());
-        
+
         System.out.println("------------------------------------");
 
         // --- EJEMPLO 2 
         // Imagina que alguien viene solo por un par de cosas
         Factura f2 = new Factura();
-        
+
         // El cliente compra 1 Martillo
         f2.agregarArticulo(Articulo.MARTILLO, 1);
-        
+
         // Se arrepiente y pide 1 Martillo más 
         f2.agregarArticulo(Articulo.MARTILLO, 1);
-        
+
         // Intenta comprar -10 tornillos por error 
         f2.agregarArticulo(Articulo.TORNILLOS, -10);
 
