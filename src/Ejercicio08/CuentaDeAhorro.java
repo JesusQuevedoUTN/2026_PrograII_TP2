@@ -27,25 +27,21 @@ public class CuentaDeAhorro {
         this.saldoAhorros = saldoAhorros;
     }
 
-    public String mostrarSaldo() {
-        return "CuentaDeAhorro{" + "saldoAhorros=" + saldoAhorros + '}';
+    public void mostrarSaldo() {
+        System.out.println("Saldo ahorros: " + saldoAhorros);
     }
 
     public void calcularInteresAnual() {
-        saldoAhorros += interesTotal();
-    }
-
-    public double interesTotal() {
-        return saldoAhorros*tasalnteresAnual;
+        saldoAhorros += saldoAhorros*tasalnteresAnual;
     }
 
     static void modificarTasalnteres(int porcentaje){
-        System.out.println("La tasa aumenta a un %" + porcentaje + "4 por cada mes");
-        tasalnteresAnual = porcentaje/100;
+        System.out.println("La tasa aumenta a un %" + porcentaje + " por cada mes");
+        tasalnteresAnual = porcentaje/100.0;
     }
             
     public void calcularInteresMensual() {
-        saldoAhorros += interesTotal()/12;
+        saldoAhorros += (saldoAhorros*tasalnteresAnual)/12;
     }
     
 }
